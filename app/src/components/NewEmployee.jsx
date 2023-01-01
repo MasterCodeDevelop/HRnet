@@ -1,4 +1,6 @@
 import React from 'react';
+import states from '../data/states';
+import { Select } from '../test/index';
 
 export default function NewEmployee() {
   return (
@@ -36,7 +38,7 @@ export default function NewEmployee() {
 
           <div className="form-group">
             <label htmlFor="state">State</label>
-            <select name="state" id="state"></select>
+            <Select data={states} name="name" />
           </div>
 
           <div className="form-group">
