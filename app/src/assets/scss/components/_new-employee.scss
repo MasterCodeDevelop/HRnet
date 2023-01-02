@@ -35,4 +35,10 @@
     max-width: 300px;
     margin: 0 auto;
   }
+  .modal-body {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

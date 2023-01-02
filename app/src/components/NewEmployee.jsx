@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { states, departments } from '../data/states';
+import { Modal, ModalHeader, ModalBody } from '../plugin/components/Modal';
+import { NavLink } from 'react-router-dom';
 
 export default function NewEmployee() {
+  const [openModal, setOpenModal] = useState(false);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setOpenModal(true);
+    console.log(e);
+  };
   return (
     <section className="new-employee">
       <h2>Create Employee</h2>
-      <form className="form">
+      <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input type="text" id="firstName"></input>
@@ -66,6 +75,19 @@ export default function NewEmployee() {
           Save
         </button>
       </form>
+
+      <Modal close={() => setOpenModal(false)} isOpen={openModal}>
+        <ModalHeader
+          close={() => setOpenModal(false)}
+          title="The employee is to be added"
+        />
+        <ModalBody>
+          You can see the list of employees by clicking on the link below.
+          <NavLink className="btn btn-secondary" to="/employees">
+            View Current Employees
+          </NavLink>
+        </ModalBody>
+      </Modal>
     </section>
   );
 }
