@@ -1,0 +1,17 @@
+/*====================== header ======================*/
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $clr-primary;
+  padding: 1.5rem;
+  height: 100px;
+  a,
+  img {
+    height: inherit;
+  }
+  img {
+    padding: 0.5rem;
+  }
+}
