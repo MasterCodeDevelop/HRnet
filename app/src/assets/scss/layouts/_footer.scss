@@ -1,0 +1,11 @@
+/*====================== footer ======================*/
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: $clr-primary;
+  padding: 1.5rem;
+  height: 100px;
+}
