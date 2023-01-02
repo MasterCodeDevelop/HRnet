@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import states from '../data/states';
 import { Select } from '../test/index';
 
 export default function NewEmployee() {
+  const selected = useRef(null);
   return (
     <section className="new-employee">
       <h2>Create Employee</h2>
@@ -37,8 +38,7 @@ export default function NewEmployee() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="state">State</label>
-            <Select data={states} name="name" />
+            <Select data={states} label="State" name="name" useref={selected} />
           </div>
 
           <div className="form-group">
