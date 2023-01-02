@@ -1,0 +1,38 @@
+/*====================== new-employee ======================*/
+.new-employee {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  h2 {
+    color: $clr-secondary;
+  }
+  .form {
+    display: grid;
+    gap: 1rem;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    label,
+    .label {
+      color: $clr-primary;
+    }
+    input,
+    select {
+      border: 1px solid $clr-primary;
+      padding: 0.3rem;
+      border-radius: 0.5rem;
+      &:focus {
+        outline: 1px solid $clr-secondary;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}

@@ -1,9 +1,7 @@
-import React, { useRef } from 'react';
-import states from '../data/states';
-import { Select } from '../test/index';
+import React from 'react';
+import { states, departments } from '../data/states';
 
 export default function NewEmployee() {
-  const selected = useRef(null);
   return (
     <section className="new-employee">
       <h2>Create Employee</h2>
@@ -38,7 +36,13 @@ export default function NewEmployee() {
           </div>
 
           <div className="form-group">
-            <Select data={states} label="State" name="name" useref={selected} />
+            <label htmlFor="state">State </label>
+            <select name="state" id="state">
+              <option disabled> Select state </option>
+              {states &&
+                states.length > 0 &&
+                states.map((e, index) => <option key={index}>{e.name}</option>)}
+            </select>
           </div>
 
           <div className="form-group">
@@ -46,17 +50,19 @@ export default function NewEmployee() {
             <input id="zip-code" type="number" />
           </div>
         </fieldset>
+
         <div className="form-group">
-          <label htmlFor="department">Department</label>
+          <label htmlFor="department">Department </label>
           <select name="department" id="department">
-            <option>Sales</option>
-            <option>Marketing</option>
-            <option>Engineering</option>
-            <option>Human Resources</option>
-            <option>Legal</option>
+            <option disabled> Select department </option>
+            {departments &&
+              departments.length > 0 &&
+              departments.map((e, index) => (
+                <option key={index}>{e.name}</option>
+              ))}
           </select>
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-secondary">
           Save
         </button>
       </form>

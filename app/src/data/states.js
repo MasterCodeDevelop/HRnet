@@ -1,5 +1,23 @@
+// all departments data { name }
+export const departments = [
+  {
+    name: 'Sales',
+  },
+  {
+    name: 'Marketing',
+  },
+  {
+    name: 'Engineering',
+  },
+  {
+    name: 'Human Resources',
+  },
+  {
+    name: 'Legal',
+  },
+];
 // all states data { name, abbreviation }
-const states = [
+export const states = [
   {
     name: 'Alabama',
     abbreviation: 'AL',
@@ -237,4 +255,3 @@ const states = [
     abbreviation: 'WY',
   },
 ];
-export default states;
