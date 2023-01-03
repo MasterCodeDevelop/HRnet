@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { states, departments } from '../data/states';
+import states from '../data/states';
+import departments from '../data/departments';
 import { Modal, ModalHeader, ModalBody } from '../plugin/components/Modal';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -31,25 +32,6 @@ export default function NewEmployee() {
   return (
     <section className="new-employee">
       <h2>Create Employee</h2>
-      <button
-        onClick={() => {
-          dispatch(
-            employeeActions.addNewEmployee({
-              firstName: 'Mohamed Ali',
-              lastName: 'EL HAMECH',
-              birthDay: '1999-05-25',
-              startDay: '2022-12-31',
-              department: 'Engeneering',
-              street: '01 rue amiral de grasse',
-              city: 'Grasse',
-              state: 'France',
-              zipCode: '06130',
-            })
-          );
-        }}
-      >
-        TEST
-      </button>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
