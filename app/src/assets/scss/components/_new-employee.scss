@@ -12,6 +12,15 @@
     display: grid;
     gap: 1rem;
   }
+  .address {
+    color: $clr-primary;
+    border: 1px solid $clr-primary;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    .form-group {
+      width: 100%;
+    }
+  }
   .form-group {
     display: flex;
     flex-direction: column;
