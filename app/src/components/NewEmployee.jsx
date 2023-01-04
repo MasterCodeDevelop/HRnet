@@ -5,6 +5,7 @@ import { Modal, ModalHeader, ModalBody } from '../plugin/components/Modal';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as employeeActions from '../slices/employee';
+import { DatePicker } from 'antd';
 
 const pattern = {
   name: '[A-z]{2,24}([ -]{1}[A-z]{1,24})?',
@@ -53,11 +54,11 @@ export default function NewEmployee() {
         </div>
         <div className="form-group">
           <label htmlFor="birthDay">Date of Birth</label>
-          <input type="date" id="birthDay" required></input>
+          <DatePicker id="birthDay" format="MM-DD-YYYY" />
         </div>
         <div className="form-group">
           <label htmlFor="startDay">Start Day</label>
-          <input type="date" id="startDay" required></input>
+          <DatePicker id="startDay" format="MM-DD-YYYY" />
         </div>
         <fieldset className="address">
           <legend>Address</legend>

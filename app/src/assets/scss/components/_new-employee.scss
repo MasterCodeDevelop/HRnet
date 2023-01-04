@@ -50,4 +50,22 @@
     flex-direction: column;
     gap: 2rem;
   }
+  .ant-picker {
+    border: 1px solid $clr-primary;
+    padding: 0 4px;
+    &-input input {
+      border: none;
+    }
+    &-input input:focus {
+      outline: none;
+    }
+  }
+}
+.ant-picker {
+  &-today-btn {
+    color: $clr-primary !important;
+  }
+  &-cell-inner::before {
+    border: 1px solid $clr-primary !important;
+  }
 }
