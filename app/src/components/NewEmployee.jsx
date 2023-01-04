@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import states from '../data/states';
 import departments from '../data/departments';
-import { Modal, ModalHeader, ModalBody } from '../plugin/components/Modal';
+import { Modal, ModalHeader, ModalBody } from 'master-react-modal';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as employeeActions from '../slices/employee';
