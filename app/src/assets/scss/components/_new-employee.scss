@@ -5,12 +5,14 @@
   align-items: center;
   padding: 1.5rem;
   gap: 1.5rem;
+  width: 600px;
   h2 {
     color: $clr-secondary;
   }
   .form {
     display: grid;
     gap: 1rem;
+    width: 100%;
   }
   .address {
     color: $clr-primary;
@@ -24,7 +26,7 @@
   .form-group {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 100%;
     label,
     .label {
       color: $clr-primary;
@@ -67,5 +69,11 @@
   }
   &-cell-inner::before {
     border: 1px solid $clr-primary !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new-employee {
+    width: 100%;
   }
 }
