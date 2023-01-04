@@ -14,4 +14,11 @@
   img {
     padding: 0.5rem;
   }
+  &-nav {
+    display: flex;
+    gap: 2rem;
+    a.active {
+      display: none;
+    }
+  }
 }

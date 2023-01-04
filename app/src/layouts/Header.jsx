@@ -9,6 +9,9 @@ export default function Header() {
         <img src={logo} alt="Wealth Health Logo" />
       </Link>
       <nav className="header-nav">
+        <NavLink className="btn btn-secondary" to="/">
+          Create Employee
+        </NavLink>
         <NavLink className="btn btn-secondary" to="/employees">
           View Current Employees
         </NavLink>
