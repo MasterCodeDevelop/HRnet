@@ -6,10 +6,19 @@
   padding: 2rem 0.5rem;
   &-header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     h1 {
+      text-align: center;
       color: $clr-secondary;
+    }
+    &__content {
+      display: flex;
+      justify-content: space-between;
+    }
+    .show-entries,
+    .search {
+      display: flex;
+      gap: 0.5rem;
     }
   }
 }
