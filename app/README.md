@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Wealth Health [P14] App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to launch the application locally?
+
+### Step 1 - Requirements:
+
+- Install nodeJS and npm [see](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+- Clone this repo: `https://github.com/MohamedAliElhamech_P14_31122022/tree/master/app`.
+
+### step 2 - Launch the App :
+
+- Open your terminal
+- Go to the folder you cloned
+- Install node_modules packages with command: ` npm install` ou ` npm i`.
+- Launch the application with the command: ` npm start`.
+- Open [http://localhost:3000](http://localhost:3000) to see the app in your browser.
 
 ## Available Scripts
 
