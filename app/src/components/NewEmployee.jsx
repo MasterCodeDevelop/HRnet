@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as employeeActions from '../slices/employee';
 import { DatePicker } from 'antd';
+import CustomSelect from './CustomSelect';
 
 const pattern = {
   name: '[A-z]{2,24}([ -]{1}[A-z]{1,24})?',
@@ -13,6 +14,10 @@ const pattern = {
 export default function NewEmployee() {
   const [openModal, setOpenModal] = useState(false);
   const dispatch = useDispatch();
+  const [selectStates, setSelectStates] = useState(states[0].name);
+  const [selectDepartments, setSelectDepartments] = useState(
+    departments[0].name
+  );
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -24,9 +29,9 @@ export default function NewEmployee() {
       startDay: e.target[3].value,
       street: e.target[5].value,
       city: e.target[6].value,
-      state: e.target[7].value,
+      state: selectStates,
       zipCode: e.target[8].value,
-      department: e.target[9].value,
+      department: selectDepartments,
     };
     dispatch(employeeActions.addNewEmployee(data));
   };
@@ -75,12 +80,7 @@ export default function NewEmployee() {
 
           <div className="form-group">
             <label htmlFor="state">State </label>
-            <select name="state" id="state" required>
-              <option disabled> Select state </option>
-              {states &&
-                states.length > 0 &&
-                states.map((e, index) => <option key={index}>{e.name}</option>)}
-            </select>
+            <CustomSelect data={states} setState={setSelectStates} />
           </div>
 
           <div className="form-group">
@@ -91,14 +91,7 @@ export default function NewEmployee() {
 
         <div className="form-group">
           <label htmlFor="department">Department </label>
-          <select name="department" id="department" required>
-            <option disabled> Select department </option>
-            {departments &&
-              departments.length > 0 &&
-              departments.map((e, index) => (
-                <option key={index}>{e.name}</option>
-              ))}
-          </select>
+          <CustomSelect data={departments} setState={setSelectDepartments} />
         </div>
         <button type="submit" className="btn btn-secondary">
           Save

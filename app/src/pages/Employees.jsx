@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import CustomTable from '../components/CustomTable';
+import CustomSelect from '../components/CustomSelect';
 
 export default function Employees() {
   const { list } = useSelector((state) => state.employee);
   const [pageSize, setPageSize] = useState(5);
-  const onChangePageSize = (e) => setPageSize(e.target.value);
   const [row, setRow] = useState(list);
   const onSearch = ({ target }) => {
     let data = [];
@@ -21,6 +21,8 @@ export default function Employees() {
     });
     setRow(data);
   };
+  const showEntries = [{ name: 5 }, { name: 10 }, { name: 25 }, { name: 50 }];
+
   return (
     <main className="employees">
       <div className="employees-header">
@@ -28,12 +30,7 @@ export default function Employees() {
         <div className="employees-header__content">
           <div className="show-entries">
             <label htmlFor="show">Show</label>
-            <select id="show" onChange={onChangePageSize}>
-              <option>5</option>
-              <option>10</option>
-              <option>25</option>
-              <option>50</option>
-            </select>
+            <CustomSelect data={showEntries} setState={setPageSize} />
             <span>entries</span>
           </div>
           <div className="search" onChange={onSearch}>

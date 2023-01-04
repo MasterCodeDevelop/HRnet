@@ -14,11 +14,21 @@
     &__content {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     .show-entries,
     .search {
       display: flex;
       gap: 0.5rem;
+      align-items: center;
+    }
+    .search input {
+      padding: 0.4rem;
+      border-radius: 5px;
+      border: 1px solid $clr-primary;
+      &:focus {
+        outline: 1px solid $clr-secondary;
+      }
     }
   }
 }
