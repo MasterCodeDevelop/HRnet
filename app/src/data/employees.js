@@ -1,3 +1,66 @@
+export const columns = [
+  {
+    key: 0,
+    title: 'First Name',
+    dataIndex: 'firstName',
+    sorter: (a, b) =>
+      a.firstName > b.firstName ? 1 : a.firstName === b.firstName ? 0 : -1,
+  },
+  {
+    key: 1,
+    title: 'Last Name',
+    dataIndex: 'lastName',
+    sorter: (a, b) =>
+      a.lastName > b.lastName ? 1 : a.lastName === b.lastName ? 0 : -1,
+  },
+  {
+    key: 2,
+    title: 'Date Of Birth',
+    dataIndex: 'birthDay',
+    sorter: (a, b) => new Date(a.birthDay) - new Date(b.birthDay),
+  },
+  {
+    key: 3,
+    title: 'Start Date',
+    dataIndex: 'startDay',
+    sorter: (a, b) => new Date(a.startDay) - new Date(b.startDay),
+  },
+  {
+    key: 4,
+    title: 'Department',
+    dataIndex: 'department',
+    sorter: (a, b) =>
+      a.lastName > b.lastName ? 1 : a.lastName === b.lastName ? 0 : -1,
+  },
+  {
+    key: 5,
+    title: 'Street',
+    dataIndex: 'street',
+    sorter: (a, b) =>
+      a.lastName > b.lastName ? 1 : a.lastName === b.lastName ? 0 : -1,
+  },
+  {
+    key: 6,
+    title: 'City',
+    dataIndex: 'city',
+    sorter: (a, b) =>
+      a.lastName > b.lastName ? 1 : a.lastName === b.lastName ? 0 : -1,
+  },
+  {
+    key: 7,
+    title: 'State',
+    dataIndex: 'state',
+    sorter: (a, b) =>
+      a.lastName > b.lastName ? 1 : a.lastName === b.lastName ? 0 : -1,
+  },
+  {
+    key: 8,
+    title: 'Zip Code',
+    dataIndex: 'zipCode',
+    sorter: (a, b) => a.lastName > b.lastName,
+  },
+];
+
 export const list = [
   {
     firstName: 'Jean',
