@@ -1,23 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-
-const initialList = [
-  {
-    firstName: 'Mohamed Ali',
-    lastName: 'EL HAMECH',
-    birthDay: '1999-05-25',
-    startDay: '2022-12-31',
-    department: 'Engeneering',
-    street: '01 rue amiral de grasse',
-    city: 'Grasse',
-    state: 'France',
-    zipCode: '06130',
-  },
-];
+import { list } from '../data/employees';
 
 const employeeSlice = createSlice({
   name: 'employee',
   initialState: {
-    list: initialList,
+    list: list,
   },
   reducers: {
     addNewEmployee: (state, action) => {
