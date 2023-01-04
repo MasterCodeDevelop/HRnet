@@ -8,11 +8,7 @@ function CustomTable({ data }) {
   data.map((employee, index) => dataSource.push({ key: index, ...employee }));
 
   return (
-    <div>
-      <header>
-        <Table columns={columns} dataSource={dataSource}></Table>
-      </header>
-    </div>
+    <Table className="custom-table" columns={columns} dataSource={dataSource} />
   );
 }
 

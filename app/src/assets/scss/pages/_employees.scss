@@ -1,0 +1,15 @@
+/*====================== employees ======================*/
+.employees {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0.5rem;
+  &-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      color: $clr-secondary;
+    }
+  }
+}
