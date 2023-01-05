@@ -30,13 +30,7 @@
 
 
 ## How to launch the application locally ?
-To start the application locally, you must follow the instructions of the [/frontend](https://github.com/MasterCodeDevelop/MohamedAliElhamech_P14_31122022/tree/master/frontend) folder.
-
-## How to launch the API locally?
-To start the API server (backend), you must follow the instructions of the [/api](https://github.com/MasterCodeDevelop/MohamedAliElhamech_P14_31122022/tree/master/api)
-
-## Swagger file
-you will find swagger file `swagger.yaml` in the root of this `/api` folder
+You must follow the instructions of the [/app](https://github.com/MasterCodeDevelop/MohamedAliElhamech_P14_31122022/tree/master/app) folder.
 
 
 ## 💻 See the demo
@@ -49,14 +43,12 @@ open [app](https://mastercodedevelop.github.io/MohamedAliElhamech_P14_31122022/)
 - HTML
 - [React](https://fr.reactjs.org/)
 - [React Router](https://reactrouter.com/)
-- [Formik](https://formik.org)
+- [Antd](https://ant.design)
 - [Axios](https://axios-http.com)
 - [React-redux](https://react-redux.js.org)
 - [Redux-toolkit](https://redux-toolkit.js.orghttps://redux-toolkit.js.org)
 - CSS [SCSS](https://sass-lang.com)
 - GIT ([GitHub](https://github.com/))
 - Editeur de code source: [VSC: Visual Studio Code](https://code.visualstudio.com/).
-- [Swagger](https://editor.swagger.io)
-- [JSDoc](https://www.npmjs.com/package/jsdoc)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
