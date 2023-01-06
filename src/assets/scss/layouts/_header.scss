@@ -6,13 +6,12 @@
   align-items: center;
   background-color: $clr-primary;
   padding: 1.5rem;
-  height: 100px;
-  a,
-  img {
-    height: inherit;
-  }
+  height: calc(100px + 1.5rem);
+
   img {
     padding: 0.5rem;
+    height: 100px;
+    width: 100px;
   }
   &-nav {
     display: flex;
